@@ -13,20 +13,24 @@ import java.util.Map;
  */
 public class Dorothy extends JavaPlugin {
 
+    // [Dorothy] tag before all messages
     public String messagePrefix = ChatColor.AQUA + "[" + ChatColor.RESET + "Dorothy" + ChatColor.AQUA + "] " + ChatColor.RESET;
 
+    // Storing home coordinates
     public Map<String, double[]> playerHomes = new HashMap<>();
 
     @Override
     public void onDisable() {
         File filePlayerHomes = new File("plugins/Dorothy/playerhomes.ser");
 
+        // Creates Dorothy directory if it doesn't exist
         if (!filePlayerHomes.exists()) {
             if (new File("plugins/Dorothy").mkdirs()) {
                 getLogger().info("Dorothy directory created");
             }
         }
 
+        // Saves player home data (creates file if not found)
         try {
             if (filePlayerHomes.createNewFile()) {
                 getLogger().info("playerhomes.ser created");
@@ -49,12 +53,14 @@ public class Dorothy extends JavaPlugin {
     public void onEnable() {
         File filePlayerHomes = new File("plugins/Dorothy/playerhomes.ser");
 
+        // Creates Dorothy directory if it doesn't exist
         if (!filePlayerHomes.exists()) {
             if (new File("plugins/Dorothy").mkdirs()) {
                 getLogger().info("Dorothy directory created");
             }
         }
 
+        // Loads player home data (creates file if not found)
         try {
             if (filePlayerHomes.exists()) {
                 getLogger().info("playerhomes.ser created");
@@ -74,6 +80,7 @@ public class Dorothy extends JavaPlugin {
 
         DorothyCommandExecutor cmdExe = new DorothyCommandExecutor(this);
 
+        // Sets command executors
         getCommand("home").setExecutor(cmdExe);
         getCommand("sethome").setExecutor(cmdExe);
     }
