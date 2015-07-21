@@ -1,0 +1,21 @@
+name: Dorothy
+version: 0.1.0
+author: Adam Grieger
+main: com.adamgrieger.dorothy.Dorothy
+description: A simple home teleportation plugin for Spigot that doesn't require heel-clicking.
+
+commands:
+  home:
+    description: Teleports the player to their home if it has been set.
+    usage: /home
+  sethome:
+    description: Sets the player's home to their current coordinates.
+    usage: /sethome
+
+permissions:
+  dorothy.*:
+    description: Gives access to all Dorothy commands.
+    default: true
+    children:
+      dorothy.home: true
+      dorothy.sethome: true
