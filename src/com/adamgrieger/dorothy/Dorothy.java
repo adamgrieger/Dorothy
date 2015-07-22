@@ -62,7 +62,7 @@ public class Dorothy extends JavaPlugin {
 
         // Loads player home data (creates file if not found)
         try {
-            if (filePlayerHomes.exists()) {
+            if (filePlayerHomes.createNewFile()) {
                 getLogger().info("playerhomes.ser created");
             } else {
                 FileInputStream fileIn = new FileInputStream(filePlayerHomes);
