@@ -3,11 +3,11 @@
 </p>
 
 <p align="center">
-  <strong>A simple home teleportation plugin for Spigot that doesn't require heel-clicking.</strong>
+  <strong>A simple home teleportation plugin for Spigot/Bukkit that doesn't require heel-clicking.</strong>
 </p>
 
 ## Description
-Dorothy is a Spigot plugin for Minecraft servers that allows people with the right permissions to set a personal home that they can teleport to. Dorothy is very lightweight, simple, and prevents player suffocation by loading the respective chunk before teleporting the player.
+Dorothy is a Spigot/Bukkit plugin for Minecraft servers that allows people with the right permissions to set a personal home that they can teleport to. Dorothy is very lightweight, simple, and prevents player suffocation by loading the respective chunk before teleporting the player.
 
 ## Download
 You can download the latest Dorothy JAR file under the [Releases](https://github.com/adamgrieger/Dorothy/releases) tab. Make sure you don't accidentally download the compressed source code, because it is not compiled for you!
